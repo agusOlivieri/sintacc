@@ -9,7 +9,20 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
+    {
+      path: '/#productos',
+      name: 'products-section',
+      component: HomeView,
+    }
   ],
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth' 
+      };
+    }
+  }
 })
 
 export default router

@@ -3,7 +3,7 @@ import Card from '@/components/Card.vue'
 </script>
 
 <template>
-    <section id="sintacc-colors">
+    <section id="sintacc-colors" class="mb-4 py-5">
         <div class="flex items-center gap-x-3 justify-center">
             <Card bg="bg-red-100">
                 <h2 class="text-2xl font-bold">Productos Rojos</h2>

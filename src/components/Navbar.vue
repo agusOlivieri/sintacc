@@ -9,12 +9,12 @@ import { RouterLink } from 'vue-router';
             </div>
             <div id="buttons" class="flex items-center gap-2">
                 <div class="px-2 py-1 hover:bg-emerald-950 text-center rounded-xs">
-                    <RouterLink to="#home">
+                    <RouterLink to="/#home">
                         Inicio
                     </RouterLink>
                 </div>
                 <div class="px-2 py-1 hover:bg-emerald-950 text-center rounded-xs">
-                    <RouterLink to="#products">
+                    <RouterLink to="/#products">
                         Productos
                     </RouterLink>
                 </div>
