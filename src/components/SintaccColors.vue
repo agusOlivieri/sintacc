@@ -8,7 +8,7 @@ import Card from '@/components/Card.vue'
             <Card bg="bg-red-100">
                 <div class="flex items-center gap-2">
                     <h2 class="text-2xl font-bold">Productos Rojos</h2>
-                    <img src="@/assets/images/gluten-free-red.png" width="46" />
+                    <img src="@/assets/images/gluten-free-red-full.png" width="46" />
                 </div>
                 <p class="mt-2 mb-4">
                     Los productos de color rojo son los que ...
@@ -17,7 +17,7 @@ import Card from '@/components/Card.vue'
             <Card bg="bg-green-100">
                 <div class="flex items-center gap-2">
                     <h2 class="text-2xl font-bold">Productos Verdes</h2>
-                    <img src="@/assets/images/gluten-free-green.png" width="46" />
+                    <img src="@/assets/images/gluten-free-green-full.png" width="46" />
                 </div>
                 <p class="mt-2 mb-4">
                     Los productos de color verde son los que ...
