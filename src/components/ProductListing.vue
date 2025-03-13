@@ -3,6 +3,7 @@ defineProps({
   image: String,
   title: String,
   description: String,
+  type: Number
 //   price: Number
 });
 </script>
@@ -12,7 +13,14 @@ defineProps({
       <img :src="image" :alt="title" class="w-full h-40 object-cover rounded-xl" />
       
       <div class="mt-4">
-        <h2 class="text-xl font-bold text-red-600">{{ title }}</h2>
+        <div v-if="type===0" class="flex items-center gap-4">
+          <h2  class="text-xl font-bold text-green-600">{{ title }}</h2>
+          <img src="@/assets/images/gluten-free-green-full.png" class="rotate-20" width="44" />
+        </div>
+        <div v-else class="flex items-center gap-4">
+          <h2 class="text-xl font-bold text-red-600">{{ title }}</h2>
+          <img src="@/assets/images/gluten-free-red-full.png" class="rotate-20" width="44" />
+        </div>
         <p class="text-gray-700 text-sm mt-2">{{ description }}</p>
       </div>
   
