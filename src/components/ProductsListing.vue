@@ -60,7 +60,7 @@ const products = [
             <h2 class="text-3xl font-bold mb-10 text-center">
                 Nuestros Productos
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <ProductListing 
                     v-for="product in products"
                     :image="product.image"

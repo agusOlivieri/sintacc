@@ -4,7 +4,7 @@ import Card from '@/components/Card.vue'
 
 <template>
     <section id="sintacc-colors" class="mb-4 py-5">
-        <div class="flex items-center gap-x-3 justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-16">
             <Card bg="bg-red-100">
                 <div class="flex items-center gap-2">
                     <h2 class="text-2xl font-bold">Productos Rojos</h2>
