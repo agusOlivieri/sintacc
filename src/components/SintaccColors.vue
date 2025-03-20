@@ -3,8 +3,8 @@ import Card from '@/components/Card.vue'
 </script>
 
 <template>
-    <section id="sintacc-colors" class="mb-8 py-6 text-center">
-        <h2 class="text-xl sm:text-3xl font-bold text-gray-800 mb-6">
+    <section id="sintacc-colors" class="my-18 pb-4 text-center">
+        <h2 class="text-xl sm:text-3xl font-bold text-gray-800 mb-8">
             ¿Qué significan los colores en nuestros productos?
         </h2>
 

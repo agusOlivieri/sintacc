@@ -3,8 +3,8 @@ import ProductListing from '@/components/ProductListing.vue';
 
 const products = [
   {
-    image: "https://via.placeholder.com/150",
-    title: "Harina de Almendra",
+    image: "@/assets/images/food-images/medialunas.jpg",
+    title: "Medialunas",
     description: "Harina sin TACC, ideal para repostería y recetas saludables.",
     type: 0
   },
@@ -55,12 +55,18 @@ const products = [
 </script>
 
 <template>
-    <section id="products" class=" bg-blue-50 px-4 py-10">
-        <div class="container-xl m-auto">
-            <h2 class="text-3xl font-bold mb-10 text-center">
-                Nuestros Productos
+    <section id="products" class="bg-gray-100 px-6 py-10">
+        <div class="max-w-6xl mx-auto text-center">
+
+            <h2 class="text-2xl sm:text-4xl font-extrabold mb-4 text-gray-800">
+                Descubre Nuestra Selección
             </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <p class="sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+              Alimentos sin TACC de la mejor calidad, cuidadosamente seleccionados para tu bienestar.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <ProductListing 
                     v-for="product in products"
                     :image="product.image"

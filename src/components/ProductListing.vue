@@ -6,20 +6,32 @@ defineProps({
   type: Number
 //   price: Number
 });
+
 </script>
 
 <template>
-    <div class="bg-white shadow-lg rounded-2xl p-4 border border-gray-200">
-      <img :src="image" :alt="title" class="w-full h-40 object-cover rounded-xl" />
+    <div 
+      class="bg-white shadow-lg rounded-2xl p-5 border transition-all transform hover:scale-105 hover:shadow-xl"
+      :class="type === 0 ? 'border-green-400' : 'border-red-400'"
+    >
+      <img src="@/assets/images/food-images/medialunas.jpg" :alt="title" class="w-full h-72 object-cover rounded-lg" />
       
       <div class="mt-4">
-        <div v-if="type===0" class="flex items-center gap-4">
-          <h2  class="text-xl font-bold text-green-600">{{ title }}</h2>
-          <img src="@/assets/images/gluten-free-green-full.png" class="rotate-20" width="44" />
-        </div>
-        <div v-else class="flex items-center gap-4">
-          <h2 class="text-xl font-bold text-red-600">{{ title }}</h2>
-          <img src="@/assets/images/gluten-free-red-full.png" class="rotate-20" width="44" />
+        <div class="flex items-center gap-3">
+          <h2 
+            class="text-xl font-bold text-green-600"
+            :class="type === 0 ? 'text-green-600' : 'text-red-600'"
+          >
+            {{ title }}
+          </h2>
+          <img v-if="type === 0"
+            src="@/assets/images/gluten-free-green-full.png" 
+            class="w-10 animate-bounce rotate-6"
+          />
+          <img v-else
+            src="@/assets/images/gluten-free-red-full.png" 
+            class="w-10 animate-bounce -rotate-6"
+          />
         </div>
         <p class="text-gray-700 text-sm mt-2">{{ description }}</p>
       </div>
