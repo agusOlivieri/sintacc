@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-    <div :class="`${colors} p-6 rounded-lg shadow-md border-l-4 `">
+    <div :class="`${colors} p-6 rounded-lg shadow-md border-l-4 hover:scale-105 transition-transform duration-300`">
         <slot></slot>
     </div>
 </template>
