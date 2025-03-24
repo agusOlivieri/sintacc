@@ -6,6 +6,7 @@ defineProps({
 </script>
 
 <template>
+    <!-- <section id="home" class=" bg-cover bg-center bg-[url('@/assets/images/fondo_sintacc.avif')] py-20 text-white"> -->
     <section id="home" class="bg-gradient-to-r from-emerald-700 to-emerald-600 py-20 text-white">
         <div class="max-w-6xl mx-auto px-6 text-center">
             
