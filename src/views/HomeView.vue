@@ -5,7 +5,7 @@ import ProductsListing from '@/components/ProductsListing.vue';
 </script>
 
 <template>
-    <Hero title="Alimentos Sin TACC, Puro Sabor" subtitle="Delicias libres de gluten, ideales para su alimentación saludable sin renunciar al gusto"/>
+    <Hero title="Panifación y Repostería Libre de Gluten" subtitle="Delicias ideales para su alimentación saludable sin renunciar al gusto"/>
     <SintaccColors />
     <ProductsListing />
 </template>
