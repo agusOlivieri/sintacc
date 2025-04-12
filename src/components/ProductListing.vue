@@ -11,8 +11,10 @@ defineProps({
 
 <template>
     <div 
-      class="bg-white shadow-lg rounded-2xl p-5 border transition-all transform hover:scale-105 hover:shadow-xl"
-      :class="type === 0 ? 'border-green-400' : 'border-red-400'"
+      class="bg-white shadow-lg rounded-2xl p-5 border transition-all transform hover:scale-105 hover:shadow-xl  view-animate-[--subjectReveal] animate-expand-horizontally animate-range-[entry_10%_contain_5%]"
+      :class="type === 0 ? 
+      'border-green-400' 
+      : 'border-red-400'"
     >
       <img src="@/assets/images/food-images/medialunas.jpg" :alt="title" class="w-full h-72 object-cover rounded-lg" />
       
