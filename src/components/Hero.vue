@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     console.log("animation ended")
     logo.classList.remove('animate-expand-vertically');
-    logo.classList.add('animate-heartbeat');
+    logo.classList.add('animate-tada');
   }, 1000); 
 });
 </script>

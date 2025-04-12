@@ -9,7 +9,7 @@ import Card from '@/components/Card.vue'
         </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 px-6 md:px-16">
-            <Card colors="bg-red-100 border-red-500">
+            <Card colors="bg-red-100 border-red-500 view-animate-[--subjectReveal] animate-zoom-in animate-range-[entry_10%_contain_25%]">
                 <div class="flex items-center gap-2">
                     <h3 class="text-2xl font-bold text-red-700">Productos Rojos</h3>
                     <img src="@/assets/images/gluten-free-red-full.png" width="46" class="rotate-6" />
@@ -18,7 +18,7 @@ import Card from '@/components/Card.vue'
                     🥛 Los productos de color rojo contienen **lactosa**.
                 </p>
             </Card>
-            <Card colors="bg-green-100 border-green-500">
+            <Card colors="bg-green-100 border-green-500 view-animate-[--subjectReveal] animate-zoom-in animate-range-[entry_10%_contain_45%]">
                 <div class="flex items-center gap-2">
                     <h3 class="text-2xl font-bold text-green-700">Productos Verdes</h3>
                     <img src="@/assets/images/gluten-free-green-full.png" width="46" class="-rotate-6" />
