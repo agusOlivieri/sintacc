@@ -1,1 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 @import "tailwindcss";
+
+body {
+    font-family: 'Paytone One', sans-serif;
+}
