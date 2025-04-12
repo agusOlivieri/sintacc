@@ -8,7 +8,7 @@ defineProps({
 <template>
     <!-- <section id="home" class=" bg-cover bg-center bg-[url('@/assets/images/fondo_sintacc.avif')] py-20 text-white"> -->
     <section id="home" class="bg-gradient-to-r from-emerald-700 to-emerald-600 py-20 text-white">
-        <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="max-w-4xl mx-auto px-6 text-center">
             
             <div class="flex felx-col items-center justify-center gap-4">
                 <h1 class="text-2xl font-extrabold sm:text-5xl">{{ title }}</h1>
