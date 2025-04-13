@@ -1,11 +1,17 @@
 <script setup>
-defineProps({
+const props = defineProps({
   image: String,
   title: String,
   description: String,
   type: Number
 //   price: Number
 });
+
+console.log(props.image);
+
+const getImagePath = (fileName) => {
+  return new URL(`@/assets/images/food-images/${fileName}`, import.meta.url).href;
+};
 
 </script>
 
@@ -16,7 +22,7 @@ defineProps({
       'border-green-400' 
       : 'border-red-400'"
     >
-      <img src="@/assets/images/food-images/medialunas.jpg" :alt="title" class="w-full h-72 object-cover rounded-lg" />
+      <img :src="image" :alt="title" class="w-full h-72 object-cover rounded-lg" />
       
       <div class="mt-4">
         <div class="flex items-center gap-3">

@@ -3,65 +3,81 @@ import ProductListing from '@/components/ProductListing.vue';
 import SortButton from '@/components/SortButton.vue';
 import { ref } from 'vue';
 
+const images = import.meta.glob('@/assets/images/food-images/*.{jpg,jpeg,png,gif}', {
+  eager: true,
+  import: 'default'
+});
+
 const products = ref([
   {
-    image: "@/assets/images/food-images/medialunas.jpg",
+    image: "medialunas.jpg",
     title: "Medialunas",
-    description: "Harina sin TACC, ideal para repostería y recetas saludables.",
+    description: "-",
     type: 0
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Galletas de Arroz",
-    description: "Crujientes galletas sin gluten, perfectas para acompañar meriendas.",
+    image: "galletas_membrillo.jpg",
+    title: "Galletas con membrillo",
+    description: "-",
     type: 0
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Fideos de Maíz",
-    description: "Pasta sin gluten hecha a base de maíz, de fácil digestión.",
+    image: "ravioles.jpg",
+    title: "Ravioles",
+    description: "-",
     type: 1
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Pan de Mandioca",
-    description: "Pan sin TACC, esponjoso y con un sabor suave.",
+    image: "bizcochitos.jpg",
+    title: "Bizcochitos",
+    description: "-",
     type: 1
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Chocolatada Sin Azúcar",
-    description: "Deliciosa chocolatada sin TACC, sin azúcar añadida.",
+    image: "chipa.jpg",
+    title: "Chipá",
+    description: "-",
     type: 0
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Barra de Cereal",
-    description: "Barrita sin gluten con frutos secos y miel.",
+    image: "pastafrola.jpg",
+    title: "Pastafrola",
+    description: "-",
     type: 0
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Mermelada de Frutas",
-    description: "Mermelada sin conservantes ni gluten, endulzada naturalmente.",
+    image: "pastafrola_membrillo.jpg",
+    title: "Pastafrola de membrillo",
+    description: "-",
     type: 1
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Mix de Frutos Secos",
-    description: "Combinación de almendras, nueces y pasas sin gluten.",
+    image: "alfajores_negros.jpg",
+    title: "Alfajores negros",
+    description: "-",
+    type: 1
+  },
+  {
+    image: "alfajores_maicena.jpg",
+    title: "Alfajores de maicena",
+    description: "-",
     type: 1
   }
 ]);
 
-const filteredProducts = ref([...products.value])
+const productsWithImages = products.value.map(product => ({
+  ...product,
+  image: images[`/src/assets/images/food-images/${product.image}`]
+}));
+
+const filteredProducts = ref([...productsWithImages])
 
 const filterProducts = (type) => {
   filteredProducts.value = [];
   setTimeout(() => {
     filteredProducts.value = type === 'all' 
-      ? [...products.value] 
-      : products.value.filter(p => p.type === type);
+      ? [...productsWithImages] 
+      : productsWithImages.filter(p => p.type === type);
   }, 200);
 };
 
