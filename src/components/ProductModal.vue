@@ -16,11 +16,10 @@ defineProps({
 
 const emit = defineEmits(['cerrar']);
 
-
 </script>
 
 <template>
-    <div v-if="mostrar" class="fixed inset-0 z-10 flex items-center justify-center backdrop-blur-xs">
+    <div class="fixed inset-0 z-10 flex items-center justify-center backdrop-blur-xs animate-blink p-4" @click="$emit('cerrar')">
         <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
             <div class="flex justify-between items-center mb-2">
                 <h2 class="text-xl ">
@@ -38,6 +37,6 @@ const emit = defineEmits(['cerrar']);
                 precio
             </p>
         </div>
-
     </div>
 </template>
+

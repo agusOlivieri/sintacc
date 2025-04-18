@@ -24,7 +24,7 @@ const cerrarModal = () => {
 
 <template>
     <div 
-      class="bg-white shadow-lg rounded-2xl border transition-all transform hover:scale-105 hover:shadow-xl  view-animate-[--subjectReveal] animate-expand-horizontally animate-range-[entry_10%_contain_5%]"
+      class="bg-white shadow-lg rounded-2xl border transition-all transform hover:scale-105 hover:shadow-xl view-animate-[--subjectReveal] animate-expand-horizontally animate-range-[entry_10%_contain_5%]"
       :class="type === 0 ? 
       'border-green-400' 
       : 'border-red-400'"
@@ -52,10 +52,13 @@ const cerrarModal = () => {
           <p class="text-gray-700 text-sm mt-2">{{ description }}</p>
         </div>
       </button>
-    </div>
 
-    <ProductModal :mostrar="mostrarModal" :titulo="title" :imagen="image" @cerrar="cerrarModal"/>
-  </template>
+      <teleport to="body">
+        <ProductModal v-if="mostrarModal" :titulo="title" :imagen="image" @cerrar="cerrarModal"/>
+      </teleport>
+
+    </div>
+</template>
   
 
   
